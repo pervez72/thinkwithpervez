@@ -1,4 +1,68 @@
----
-layout: home fd
-author_profile: true
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think with Pervez</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+
+    <!-- Navbar -->
+    <header class="bg-gray-100 shadow">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">Think with Pervez</h1>
+        <nav class="space-x-4">
+          <a href="#about" class="hover:text-blue-600">About</a>
+          <a href="#projects" class="hover:text-blue-600">Projects</a>
+          <a href="#contact" class="hover:text-blue-600">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center py-20 bg-gradient-to-r from-blue-50 to-blue-100">
+      <h2 class="text-4xl font-bold mb-4">👋 I'm Pervez</h2>
+      <p class="text-lg mb-6">ML Engineer | Content Creator | Problem Solver</p>
+      <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Let's Connect</a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container mx-auto px-4 py-16">
+      <h3 class="text-2xl font-bold mb-4">🧠 About Me</h3>
+      <p>
+        I'm a 2nd-year university student writing a Machine Learning book in Bangla,
+        building projects that solve real-life problems, and helping others learn through content.
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="bg-gray-50 py-16">
+      <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-4">💻 Projects</h3>
+        <ul class="space-y-4">
+          <li class="bg-white p-4 rounded shadow">📊 Cricket Shot Classifier using ML & OpenCV</li>
+          <li class="bg-white p-4 rounded shadow">🚆 Bangladesh Railway Auto Ticket Bot (8AM Smart Buyer)</li>
+          <li class="bg-white p-4 rounded shadow">✍️ Machine Learning Book in Bangla (with cooking metaphors)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container mx-auto px-4 py-16">
+      <h3 class="text-2xl font-bold mb-4">📬 Contact Me</h3>
+      <p>Email: <a href="mailto:hello@thinkwithpervez.com" class="text-blue-600 hover:underline">hello@thinkwithpervez.com</a></p>
+      <p class="mt-2">Facebook: <a href="https://facebook.com/thinkwithpervez" class="text-blue-600 hover:underline" target="_blank">/thinkwithpervez</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-center py-4">
+      <p>© 2025 Think with Pervez. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
