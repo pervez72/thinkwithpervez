@@ -2,17 +2,232 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Test Hover</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- Essential Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Think With Pervez - ML Engineer, Writer, Educator" />
+  <title>Think with Pervez</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS Files -->
+  <link rel="stylesheet" href="style/base.css" />
+  <link rel="stylesheet" href="style/layout.css" />
+  <link rel="stylesheet" href="style/utilities.css" />
+  <link rel="stylesheet" href="style/components/footer.css" />
+  <link rel="stylesheet" href="style/components/hero.css" />
+  <link rel="stylesheet" href="style/components/navbar.css" />
+
+  <!-- Global Styles -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .animate-slide {
+      animation: slide 20s linear infinite;
+    }
+  </style>
 </head>
 
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <a href="#home" aria-label="Back to top" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow
-            hover:bg-blue-700 hover:scale-105 duration-300 transition transform">
-        ↑ Top
-    </a>
+<body class="bg-slate-100 text-gray-800 font-sans dark:bg-gray-900 dark:text-gray-100">
+
+  <!-- Header & Navigation -->
+  <header class="sticky top-0 bg-white shadow z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-4">
+      <!-- Logo -->
+      <div class="text-2xl font-bold text-blue-700">ThinkWithPervez</div>
+
+      <!-- Menu button (mobile) -->
+      <div class="md:hidden">
+        <button id="menuBtn" class="text-gray-700 focus:outline-none text-2xl">☰</button>
+      </div>
+
+      <!-- Nav items -->
+      <nav id="navMenu" class="hidden md:flex space-x-6">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#blog" class="nav-link">Blog</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+      <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+      <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600">About</a>
+      <a href="#blog" class="block py-2 text-gray-700 hover:text-blue-600">Blog</a>
+      <a href="#products" class="block py-2 text-gray-700 hover:text-blue-600">Products</a>
+      <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+    </div>
+
+    <!-- JS for toggle -->
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-slate-100 px-4">
+    <div class="text-center max-w-2xl">
+      <p dir="rtl" style="font-size: 24px; font-family: 'Amiri', serif;">ٱلسَّلَامُ عَلَيْكُمْ أَخِي الْعَزِيز وَأُخْتِي الْعَزِيزَة</p>
+      <p class="text-xl text-green-700 font-semibold mb-2">As-salamu Alaikum my dear brother and sister,</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Hi, I’m Pervez</h1>
+      <p class="mt-4 text-lg text-gray-600">ML Engineer & Story-based Educator. I teach Machine Learning in Bangla with real-life analogies.</p>
+      <a href="#blog" class="mt-6 inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Read My Blog</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-gray-50 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+      <p class="text-gray-600 text-lg">I’m a 2nd-year CSE student, passionate about AI and machine learning. I create educational content, write books, and solve real-world problems in Bengali.</p>
+      <div class="mt-4 space-x-3">
+        <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">TensorFlow</span>
+        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">OpenCV</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="py-16 bg-slate-50 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-8">Latest Blog Posts</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Blog 1 -->
+        <article class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-bold mb-2">📘 How I Built a Cricket Shot Classifier</h3>
+          <p class="text-gray-600 text-sm mb-4">Real-world ML project using OpenCV & CNN — explained with cooking metaphors in Bangla.</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">Read more →</a>
+        </article>
+        <!-- Blog 2 -->
+        <article class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-bold mb-2">📕 Understanding Overfitting with Bengali Stories</h3>
+          <p class="text-gray-600 text-sm mb-4">How overfitting looks like your mother's over-expectations from her best curry recipe!</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">Read more →</a>
+        </article>
+        <!-- Blog 3 -->
+        <article class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-bold mb-2">🎥 My First YouTube Talk on ML Basics</h3>
+          <p class="text-gray-600 text-sm mb-4">A screen-recorded intro to ML, aimed at Bengali students starting their ML journey.</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">Watch now →</a>
+        </article>
+      </div>
+
+      <!-- SaaS Product Section -->
+      <section id="products" class="py-16 bg-gray-50 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+          <h2 class="text-3xl font-semibold mb-8">🚀 My AI Tools & Startup Ideas</h2>
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- Product 1 -->
+            <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+              <h3 class="text-xl font-bold mb-2">🎯 Bangla ExamBot</h3>
+              <p class="text-gray-600 text-sm mb-4">An AI that generates university-level exam questions and auto-grades Bangla answers.</p>
+              <a href="#" class="text-blue-600 font-semibold hover:underline">See demo →</a>
+            </div>
+            <!-- Product 2 -->
+            <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+              <h3 class="text-xl font-bold mb-2">🎟️ TicketBot for Bangladesh Railway</h3>
+              <p class="text-gray-600 text-sm mb-4">A bot to auto-book BD railway tickets at 8 AM sharp, with retry logic & Telegram alerts.</p>
+              <a href="#" class="text-blue-600 font-semibold hover:underline">Learn more →</a>
+            </div>
+            <!-- Product 3 -->
+            <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+              <h3 class="text-xl font-bold mb-2">📊 ML Service for Business</h3>
+              <p class="text-gray-600 text-sm mb-4">Offering ML solutions (e.g. demand forecasting, sentiment analysis) for small startups.</p>
+              <a href="#" class="text-blue-600 font-semibold hover:underline">Work with me →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="bg-slate-100 py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-semibold mb-8">❤️ What People Say</h2>
+          <div class="space-y-6">
+            <blockquote class="bg-white p-6 rounded shadow">
+              <p class="text-gray-700 italic">“Pervez bhai makes ML feel like cooking with my mom! So easy to grasp.”</p>
+              <footer class="mt-2 text-sm text-gray-500">— Arafat, CSE Student</footer>
+            </blockquote>
+            <blockquote class="bg-white p-6 rounded shadow">
+              <p class="text-gray-700 italic">“Your ticket bot saved me hours during Eid! JazakAllah Khair.”</p>
+              <footer class="mt-2 text-sm text-gray-500">— Imran, Dhaka</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- Auto-Move Feature Section -->
+      <div class="relative w-full overflow-hidden mt-12">
+        <div class="flex animate-slide space-x-6 px-4">
+          <img src="book-cover.jpg" alt="My Book" class="h-40 rounded shadow" />
+          <a href="https://youtube.com/yourvideo" target="_blank">
+            <img src="youtube-thumbnail.jpg" alt="My Video" class="h-40 rounded shadow" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white dark:bg-gray-900 px-4">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-4">📬 Stay in Touch</h2>
+      <p class="text-gray-600 mb-6">Want to collaborate or get my latest AI updates?</p>
+      <form action="/subscribe" method="POST" class="flex flex-col space-y-4">
+        <input type="email" placeholder="Enter your email" class="px-4 py-2 border rounded" />
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Subscribe</button>
+      </form>
+      <div class="mt-4 text-gray-500 text-sm">
+        or email me at: <a href="mailto:thinkwithpervez@gmail.com" class="text-blue-600 hover:underline">thinkwithpervez@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 border-t py-6 text-center text-sm">
+    © 2025 ThinkWithPervez. All rights reserved.
+  </footer>
+
+  <!-- Hover effect added -->
+  <!-- 🔝 Back to Top Button -->
+  <a href="#home" aria-label="Back to top" class="fixed bottom-20 right-4 bg-blue-600 text-white px-4 py-2 rounded-full shadow 
+          hover:bg-blue-700 hover:scale-105 duration-300 transition transform z-40">
+    ↑ Top
+  </a>
+  <!-- 🌙 Dark Mode Toggle Button -->
+  <button id="darkModeToggle" class="fixed bottom-4 right-4 bg-gray-800 text-white p-3 rounded-full shadow-lg z-50 hover:bg-gray-700 transition">
+    🌙
+  </button>
+  <!-- Navigation Bar underline show -->
+  <script src="js/active-link.js"></script>
+  <!-- When scroll active section show or indicate -->
+  <script src="js/scrollspy.js"></script>
+  <!-- Dark Mode Toggle -->
+  <script src="js/darkModeToggle.js"></script>
+
 </body>
 
 </html>

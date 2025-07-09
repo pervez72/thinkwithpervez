@@ -28,17 +28,18 @@ html {
 
 
 
-/* Navigation bar */
+/* Navigation bar link base style */
 .nav-link {
   position: relative;
   padding-bottom: 4px;
-  text-decoration: none; /* ডিফল্ট আন্ডারলাইন বন্ধ */
-  color: #1e40af; /* নীল রঙ */
+  text-decoration: none;
+  color: #1e40af; /* Blue */
   font-weight: 600;
 }
 
-.nav-link:hover {
-  text-decoration: none; /* হোভার এ আন্ডারলাইন */
+/* Hover effect */
+.nav-link:hover::after {
+  width: 100%;
 }
 
 .nav-link::after {
@@ -48,13 +49,12 @@ html {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #bf6576; /* নীল আন্ডারলাইন */
+  background-color: #bf6576; /* pinkish underline */
   border-radius: 2px;
   transition: width 0.3s ease;
 }
 
+/* Active state */
 .nav-link.active::after {
-  width: 100%; /* active হলে পুরো আন্ডারলাইন দেখাবে */
+  width: 100%;
 }
-
-
