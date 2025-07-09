@@ -19,18 +19,45 @@
 <body class="bg-gray-50 text-gray-800 font-sans">
 
   <!-- Header & Navigation -->
-  <header class="sticky top-0 bg-white shadow z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-4">
-      <div class="text-2xl font-bold text-blue-600">ThinkWithPervez</div>
-      <nav class="space-x-6">
-        <a href="#home" class="hover:text-blue-600">Home</a>
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#blog" class="hover:text-blue-600">Blog</a>
-        <a href="#projects" class="hover:text-blue-600">Projects</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
-      </nav>
+<!-- Header & Navigation -->
+<header class="sticky top-0 bg-white shadow z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-4">
+    <!-- Logo -->
+    <div class="text-2xl font-bold text-blue-700">ThinkWithPervez</div>
+
+    <!-- Menu button (mobile) -->
+    <div class="md:hidden">
+      <button id="menuBtn" class="text-gray-700 focus:outline-none text-2xl">&#9776;</button>
     </div>
-  </header>
+
+    <!-- Nav items -->
+    <nav id="navMenu" class="hidden md:flex space-x-6">
+      <a href="#home" class="hover:text-blue-600">Home</a>
+      <a href="#about" class="hover:text-blue-600">About</a>
+      <a href="#blog" class="hover:text-blue-600">Blog</a>
+      <a href="#projects" class="hover:text-blue-600">Projects</a>
+      <a href="#contact" class="hover:text-blue-600">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+    <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+    <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600">About</a>
+    <a href="#blog" class="block py-2 text-gray-700 hover:text-blue-600">Blog</a>
+    <a href="#projects" class="block py-2 text-gray-700 hover:text-blue-600">Projects</a>
+    <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+  </div>
+
+  <!-- JS for toggle -->
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</header>
 
   <!-- Hero Section -->
   <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white px-4">
