@@ -1,0 +1,60 @@
+/* base.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration:none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+
+
+ /* global style and smooth scroll  */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* Navigation bar link base style */
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+  text-decoration: none;
+  color: #1e40af; /* Blue */
+  font-weight: 600;
+}
+
+/* Hover effect */
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #bf6576; /* pinkish underline */
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Active state */
+.nav-link.active::after {
+  width: 100%;
+}
