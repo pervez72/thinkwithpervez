@@ -11,14 +11,50 @@ a {
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration:none;
 }
 ul {
   list-style: none;
   padding: 0;
 }
 
+
+
+
  /* global style and smooth scroll  */
 html {
   scroll-behavior: smooth;
 }
+
+
+
+/* Navigation bar */
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+  text-decoration: none; /* ডিফল্ট আন্ডারলাইন বন্ধ */
+  color: #1e40af; /* নীল রঙ */
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  text-decoration: none; /* হোভার এ আন্ডারলাইন */
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #bf6576; /* নীল আন্ডারলাইন */
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-link.active::after {
+  width: 100%; /* active হলে পুরো আন্ডারলাইন দেখাবে */
+}
+
+
