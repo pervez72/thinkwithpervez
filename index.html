@@ -1,24 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+
+
+
+<!-- HEADER Main Setting -->
 <head>
+  <!-- Essential Meta Tags -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Think With Pervez - ML Engineer, Writer, Educator">
+  <meta name="description" content="Think With Pervez - ML Engineer, Writer, Educator" />
   <title>Think with Pervez</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS Files -->
+  <link rel="stylesheet" href="style/base.css" />
+  <link rel="stylesheet" href="style/layout.css" />
+   <link rel="stylesheet" href="style/utilities.css" />
+  <link rel="stylesheet" href="style/components/footer.css" />
+  <link rel="stylesheet" href="style/components/hero.css" />
+  <link rel="stylesheet" href="style/components/navbar.css" />
+ 
+  <!-- Global Styles -->
   <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
     @keyframes slide {
       0% { transform: translateX(100%); }
       100% { transform: translateX(-100%); }
     }
+
     .animate-slide {
       animation: slide 20s linear infinite;
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
 
-  <!-- Header & Navigation -->
+
+
+<!--BODY SECTION-->
+<body class="bg-slate-100 text-gray-800 font-sans dark:bg-gray-900 dark:text-gray-100">
+
+ <!-- 🌙 Dark Mode Toggle Button -->
+  <button onclick="document.documentElement.classList.toggle('dark')"
+    class="fixed bottom-4 right-4 bg-gray-800 text-white p-3 rounded-full shadow-lg z-50 hover:bg-gray-700 transition">
+    🌙
+  </button>
+  <!-- 🔝 Back to Top Button -->
+  <a href="#home" class="fixed bottom-20 right-4 bg-blue-600 text-white px-4 py-2 rounded-full shadow hover:bg-blue-700 transition z-40">
+    ↑ Top
+  </a>
+
 <!-- Header & Navigation -->
 <header class="sticky top-0 bg-white shadow z-50">
   <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-4">
@@ -33,9 +73,10 @@
     <!-- Nav items -->
     <nav id="navMenu" class="hidden md:flex space-x-6">
       <a href="#home" class="hover:text-blue-600">Home</a>
+       <a href="#blog" class="hover:text-blue-600">Blog</a>
       <a href="#about" class="hover:text-blue-600">About</a>
-      <a href="#blog" class="hover:text-blue-600">Blog</a>
       <a href="#projects" class="hover:text-blue-600">Projects</a>
+      
       <a href="#contact" class="hover:text-blue-600">Contact</a>
     </nav>
   </div>
@@ -59,8 +100,14 @@
   </script>
 </header>
 
+
+
+
+
+
+
   <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white px-4">
+  <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-slate-100 px-4">
     <div class="text-center max-w-2xl">
       <p dir="rtl" style="font-size: 24px; font-family: 'Amiri', serif;">ٱلسَّلَامُ عَلَيْكُمْ أَخِي الْعَزِيز وَأُخْتِي الْعَزِيزَة</p>
       
@@ -71,8 +118,10 @@
     </div>
   </section>
 
+
+
   <!-- About Section -->
-  <section id="about" class="py-16 bg-white px-4">
+  <section id="about" class="py-16 bg-gray-50 px-4">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-semibold mb-4">About Me</h2>
       <p class="text-gray-600 text-lg">I’m a 2nd-year CSE student, passionate about AI and machine learning. I create educational content, write books, and solve real-world problems in Bengali.</p>
@@ -84,8 +133,10 @@
     </div>
   </section>
 
+
+
   <!-- Blog Section -->
-  <section id="blog" class="py-16 bg-gray-100 px-4">
+  <section id="blog" class="py-16 bg-slate-50 px-4">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-3xl font-semibold mb-8">Latest Blog Posts</h2>
       <div class="grid md:grid-cols-3 gap-6">
@@ -109,9 +160,10 @@
         </article>
       </div>
 
-      <!-- Add new Section  SASS                              -->
-      <!-- SaaS Product Section -->
-<section id="products" class="py-16 bg-white px-4">
+
+<!-- Add new Section  SASS-->
+<!-- SaaS Product Section -->
+<section id="products" class="py-16 bg-gray-50 px-4">
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-3xl font-semibold mb-8">🚀 My AI Tools & Startup Ideas</h2>
     <div class="grid md:grid-cols-3 gap-6">
@@ -137,8 +189,10 @@
   </div>
 </section>
 
-  <!-- Testimonials Section -->
-<section class="bg-gray-100 py-16 px-4">
+
+
+<!-- Testimonials Section -->
+<section class="bg-slate-100 py-16 px-4">
   <div class="max-w-4xl mx-auto text-center">
     <h2 class="text-3xl font-semibold mb-8">❤️ What People Say</h2>
     <div class="space-y-6">
@@ -155,7 +209,7 @@
 </section>
 
 
-      <!-- Auto-Move Feature Section -->
+<!-- Auto-Move Feature Section -->
       <div class="relative w-full overflow-hidden mt-12">
         <div class="flex animate-slide space-x-6 px-4">
           <img src="book-cover.jpg" alt="My Book" class="h-40 rounded shadow" />
@@ -169,7 +223,7 @@
 
 
   <!-- Contact Section -->
-<section id="contact" class="py-16 bg-white px-4">
+<section id="contact" class="py-16 bg-white dark:bg-gray-900 px-4">
   <div class="max-w-xl mx-auto text-center">
     <h2 class="text-3xl font-semibold mb-4">📬 Stay in Touch</h2>
     <p class="text-gray-600 mb-6">Want to collaborate or get my latest AI updates?</p>
@@ -185,9 +239,34 @@
 
 
   <!-- Footer -->
-  <footer class="bg-white border-t py-6 text-center text-sm text-gray-500">
+<footer class="bg-gray-900 text-gray-400 border-t py-6 text-center text-sm">
     © 2025 ThinkWithPervez. All rights reserved.
   </footer>
+
+
+  <!-- java script use for dark mode -->
+  <script>
+  // পেজ লোডে সিস্টেম পছন্দ অনুযায়ী dark ক্লাস সেট
+  if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+    document.documentElement.classList.add('dark');
+  }
+
+  // Toggle বাটন
+  const toggleBtn = document.querySelector('button[onclick]');
+  toggleBtn.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+  });
+</script>
+
+
+<!-- hobar effect add -->
+
+<a href="#home"
+   aria-label="Back to top"
+   class="fixed bottom-20 right-4 bg-blue-600 text-white px-4 py-2 rounded-full shadow 
+          hover:bg-blue-700 hover:scale-105 duration-300 transition z-40">
+  ↑ Top
+</a>
 
 </body>
 </html>

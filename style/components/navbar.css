@@ -1,0 +1,11 @@
+/* components/navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 20px;
+  font-weight: bold;
+}

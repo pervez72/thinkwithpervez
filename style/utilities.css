@@ -1,0 +1,11 @@
+/* utilities.css */
+.gray {
+  background-color: #f9f9f9;
+}
+
+ul li {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid #0077cc;
+}
