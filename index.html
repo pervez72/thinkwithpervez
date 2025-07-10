@@ -62,7 +62,7 @@
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#blog" class="nav-link">Blog</a>
-        <a href="#product/Services" class="nav-link">Product/Services</a>
+        <a href="#product/services" class="nav-link">Product/Services</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </div>
@@ -92,13 +92,23 @@
     <div class="text-center max-w-2xl">
       <p dir="rtl" style="font-size: 24px; font-family: 'Amiri', serif;">ٱلسَّلَامُ عَلَيْكُمْ أَخِي الْعَزِيز وَأُخْتِي
         الْعَزِيزَة</p>
-      
+
       <p class="text-xl text-green-700 font-semibold mb-2">As-salamu Alaikum my dear brother and sister,</p>
       <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Hi, I’m Pervez</h1>
       <p class="mt-4 text-lg text-gray-600">ML Engineer & Story-based Educator. I teach Machine Learning in Bangla with
         real-life analogies.</p>
-      <a href="#blog"
-        class="mt-6 inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Read My Blog</a>
+
+
+      <!--Button Hero Section-->
+      <a href="#blog" class="mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 
+          text-white px-6 py-2 rounded-full shadow-md 
+          hover:shadow-xl hover:opacity-90 
+          transition duration-300 ease-in-out">
+        📘 Read My Blog
+      </a>
+
+
+
     </div>
   </section>
 
@@ -113,11 +123,52 @@
         <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">TensorFlow</span>
         <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">OpenCV</span>
       </div>
+
+      <!-- Buttons -->
+      <div class="flex justify-center gap-3 flex-wrap mt-6">
+        <!-- More Info -->
+        <a href="/apps/about"
+          class="inline-flex items-center gap-2 text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-300 rounded-md px-4 py-1.5 shadow transition-all duration-200">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 12h.01" />
+          </svg>
+          More Info
+        </a>
+
+        <!-- View Projects -->
+        <a href="#projects"
+          class="inline-flex items-center gap-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 rounded-md px-4 py-1.5 shadow transition-all duration-200">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          View Projects
+        </a>
+
+        <!-- Hire Me -->
+        <a href="#contact"
+          class="inline-flex items-center gap-2 text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 rounded-md px-4 py-1.5 shadow transition-all duration-200">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M5.121 17.804A9 9 0 1119.5 10.5c0 .697-.106 1.373-.306 2.012M15 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2" />
+          </svg>
+          Hire Me
+        </a>
+
+
+        <!-- Download CV -->
+        <a href="your-cv.pdf" download
+          class="inline-flex items-center gap-2 text-sm font-medium text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 rounded-md px-4 py-1.5 shadow transition-all duration-200">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v16h16V4H4zm8 4v8m0 0l3-3m-3 3l-3-3" />
+          </svg>
+          Download CV
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Blog Section -->
-  <section id="blog" class="py-16 bg-slate-50 px-4">
+  <section id="blog" class="py-16 bg-slate-50 px-4 mb-8">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-3xl font-semibold mb-8">Latest Blog Posts</h2>
       <div class="grid md:grid-cols-3 gap-6">
@@ -143,9 +194,18 @@
           <a href="#" class="text-blue-600 font-semibold hover:underline">Watch now →</a>
         </article>
       </div>
+      <!--Bolg CTA-->
+      <div class="text-center">
+        <!-- Place the button here -->
+        <a href="/blog"
+          class="mt-6 inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6 py-2 rounded-full hover:opacity-90 transition duration-300 shadow-md">
+          Read More Blog
+        </a>
+      </div>
+
 
       <!-- SaaS Product Section -->
-      <section id="products" class="py-16 bg-gray-50 px-4">
+      <section id="product/services" class="py-16 bg-gray-50 px-4">
         <div class="max-w-6xl mx-auto text-center">
           <h2 class="text-3xl font-semibold mb-8">🚀 My AI Tools & Startup Ideas</h2>
           <div class="grid md:grid-cols-3 gap-6">
@@ -174,10 +234,19 @@
         </div>
       </section>
 
+      <!--SASS CTA-->
+      <div class="text-center">
+        <a href="/product-services"
+          class="mt-10 inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6 py-2 rounded-full hover:opacity-90 transition duration-300 shadow-md">
+          Explore All Products
+        </a>
+      </div>
+
+
       <!-- Testimonials Section -->
       <section class="bg-slate-100 py-16 px-4">
         <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-3xl font-semibold mb-8">❤️ What People Say</h2>
+          <h2 class="text-3xl font-semibold mb-8">What People Say</h2>
           <div class="space-y-6">
             <blockquote class="bg-white p-6 rounded shadow">
               <p class="text-gray-700 italic">“Pervez bhai makes ML feel like cooking with my mom! So easy to grasp.”
@@ -216,7 +285,7 @@
       </form>
       <div class="mt-4 text-gray-500 text-sm">
         or email me at: <a href="mailto:thinkwithpervez@gmail.com"
-          class="text-blue-600 hover:underline">thinkwithpervez@gmail.com</a>
+          class="text-blue-600 hover:underline">2204016@student.duet.ac.bd</a>
       </div>
     </div>
   </section>
@@ -226,17 +295,27 @@
     © 2025 ThinkWithPervez. All rights reserved.
   </footer>
 
-  <!-- Hover effect added -->
   <!-- 🔝 Back to Top Button -->
-  <a href="#home" aria-label="Back to top" class="fixed bottom-20 right-4 bg-blue-600 text-white px-4 py-2 rounded-full shadow 
-          hover:bg-blue-700 hover:scale-105 duration-300 transition transform z-40">
-    ↑ Top
+  <!-- 🔝 Back to Top Button -->
+  <a href="#home" aria-label="Back to top" class="fixed bottom-20 right-4 z-50 
+          bg-gradient-to-r from-indigo-500 to-purple-600 
+          text-white px-4 py-3 
+          rounded-full shadow-xl 
+          hover:scale-110 hover:shadow-2xl 
+          transition-all duration-300 ease-in-out">
+    ⬆️ Top
   </a>
-  <!-- 🌙 Dark Mode Toggle Button -->
-  <button id="darkModeToggle"
-    class="fixed bottom-4 right-4 bg-gray-800 text-white p-3 rounded-full shadow-lg z-50 hover:bg-gray-700 transition">
+
+  <!-- Dark Mode Toggle Button -->
+  <button id="darkModeToggle" class="fixed bottom-6 right-4 
+          bg-gray-800 text-white p-3 
+          rounded-full shadow-lg z-50 
+          hover:bg-gray-700 transition">
     🌙
   </button>
+
+
+  <!--Java Script S-->
   <!-- Navigation Bar underline show -->
   <script src="js/active-link.js"></script>
   <!-- When scroll active section show or indicate -->
